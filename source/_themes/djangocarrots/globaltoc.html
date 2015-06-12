@@ -1,1 +1,14 @@
 {{ toctree() }}
+
+<ul class="current">
+{% if prev %}
+	<li class="toctree-l1">
+		Previous: <a href="{{ prev.link|e }}">{{ prev.title }}</a>
+	</li>
+{% endif %}
+{% if next %}
+	<li class="toctree-l1">
+		Next: <a href="{{ next.link|e }}">{{ next.title }}</a>
+	</li>
+{% endif %}
+</ul>
